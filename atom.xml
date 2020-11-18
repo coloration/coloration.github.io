@@ -1863,6 +1863,69 @@ $ rmate ~/foo.txt
         <updated>2018-12-31T16:00:00.000Z</updated>
     </entry>
     <entry>
+        <id>http://coloration.top/system/server-os/macos/</id>
+        <title>MacOS Tip</title>
+        <link rel="alternate" href="http://coloration.top/system/server-os/macos/"/>
+        <content type="html">&lt;p&gt;修改系统配置：系统偏好设置... -&amp;gt; 安全性与隐私。修改为任何来源&lt;br&gt;
+如果没有这个选项的话 （macOS Sierra 10.12） , 打开终端，执行  &lt;code&gt;sudo spctl --master-disable&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;安装的软件 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pZnVubWFjLmNvbQ==&#34;&gt;www.ifunmac.com&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;chrome&lt;/li&gt;
+&lt;li&gt;搜狗输入法&lt;/li&gt;
+&lt;li&gt;BetterZip&lt;/li&gt;
+&lt;li&gt;Xcode (附带 Git)&lt;/li&gt;
+&lt;li&gt;GitKraken&lt;/li&gt;
+&lt;li&gt;iStat Menus 监控硬件温度&lt;/li&gt;
+&lt;li&gt;VS Code&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Zpc2hzaGVsbC5jb20v&#34;&gt;fishshell&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dldGxhbnRlcm4vbGFudGVybg==&#34;&gt;蓝灯&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Homebrew： &lt;code&gt;/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;系统偏好设置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;触摸板 - 滚动缩放，勾去自然&lt;/li&gt;
+&lt;li&gt;触摸板 - 光标与点按，辅助点按 - 用两个手指点按&lt;/li&gt;
+&lt;li&gt;触摸板 - 轻点来点按&lt;/li&gt;
+&lt;li&gt;安全与隐私性 -&lt;/li&gt;
+&lt;li&gt;声音 - 在菜单栏中显示音量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;command&lt;/code&gt;  +  &lt;code&gt;shift&lt;/code&gt;  +  &lt;code&gt;.&lt;/code&gt;  显示隐藏文件&lt;br&gt;
+ &lt;code&gt;ls -la&lt;/code&gt;  终端显示隐藏文件&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25vZGVqcy5vcmc=&#34;&gt; nodejs.org&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;safari 设置审查元素 - safari 偏好设置 - 高级 - 在菜单栏中显示开发菜单&lt;/p&gt;
+&lt;h3 id=&#34;node&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#node&#34;&gt;#&lt;/a&gt; node&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm config set registry https://registry.npm.taobao.org --global
+npm config set disturl https://npm.taobao.org/dist --global
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;vscode-插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vscode-插件&#34;&gt;#&lt;/a&gt; vscode 插件&lt;/h3&gt;
+&lt;p&gt;command + shift + p =&amp;gt; Shell Command&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[vutur]&lt;/li&gt;
+&lt;li&gt;[]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ps-插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ps-插件&#34;&gt;#&lt;/a&gt; ps 插件&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5mYW5jeW5vZGUuY29tLmNuL3B4Y29vaw==&#34;&gt;pxCook&lt;/span&gt; 支持 sketch&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5jdXR0ZXJtYW4uY24vemgvY3V0dGVybWFu&#34;&gt;cutterman&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGh1Yi5jb20vbm9ydmlnL3BhaXAtbGlzcA==&#34;&gt;Mac 系统免费软件&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2pheXdjamxvdmUvYXdlc29tZS1tYWMvYmxvYi9tYXN0ZXIvUkVBRE1FLXpoLm1k&#34;&gt;Awesome Mac（中文版）&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jaXJjbGVhcHBzLmNvLw==&#34;&gt;Source Player - 国人开发的 MacOS 视频播放器，特点是点击文本字幕，会显示英语单词的中文解释，英语学习者的小帮手&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZGF0by9pZDE0NzA1ODQxMDc/bXQ9MTI=&#34;&gt;Dato - MacOS 菜单栏系统时钟的替代品，显示月历和时区，免费软件。&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3NpbmRyZXNvcmh1cy9HaWZza2k=&#34;&gt;gifski macOS 视频转 gif&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9keW5hbWljd2FsbHBhcGVyLmNsdWIv&#34;&gt;MacOS Mojave 动态壁纸&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wb2NrLmRldi8=&#34;&gt; Pock - 把 Macbook 笔记本的 Dock 栏都搬到 Touchbar&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dlZTFrL3VQaWM=&#34;&gt;mac os 上传图床&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21hdHJ5ZXIvYml0YmFy&#34;&gt; bitbar 将任何脚本或程序的输出直接放在 Mac OS X 菜单栏的工具。&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21tYXR0b3p6aS9MaXRlcmFyeUNsb2NrU2NyZWVuU2F2ZXI=&#34;&gt;LiteraryClockScreenSaver - Mac 的屏保程序，会显示一段文学作品的段落，里面包含了当前时间。&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3NlcmhpaS1sb25kYXIvb3Blbi1zb3VyY2UtbWFjLW9zLWFwcHMvYmxvYi9tYXN0ZXIvUkVBRE1FLm1k&#34;&gt;open-source-mac-os-app&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcmNoaXZlLm9yZy9kZXRhaWxzL21hY19NYWNPU182LjAuOA==&#34;&gt;MacOS system6 - Macintosh 计算机的操作系统，1988 年由苹果公司发布。这里用虚拟机在浏览器里面启动这个操作系统。&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qb3NlcGhjaGFuZzEwLmdpdGh1Yi5pby9jaGluZXNlLWluZGllLWhhY2tlcnMv&#34;&gt;中国独立 iOS 和 macOS 开发者的作品&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21hdHJ5ZXIvYml0YmFy&#34;&gt;bitbar 将任何脚本或程序的输出直接放在 Mac OS X 菜单栏的工具。&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <updated>2018-12-31T16:00:00.000Z</updated>
+    </entry>
+    <entry>
         <id>http://coloration.top/system/server-os/shell/</id>
         <title>linux 常用命令</title>
         <link rel="alternate" href="http://coloration.top/system/server-os/shell/"/>
@@ -2089,69 +2152,6 @@ $ man [命令]
 &lt;li&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly92aW0tYWR2ZW50dXJlcy5jb20v&#34;&gt;通过游戏学习 Vim，看上去比较有趣&lt;/span&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        <updated>2018-12-31T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>http://coloration.top/system/server-os/macos/</id>
-        <title>MacOS Tip</title>
-        <link rel="alternate" href="http://coloration.top/system/server-os/macos/"/>
-        <content type="html">&lt;p&gt;修改系统配置：系统偏好设置... -&amp;gt; 安全性与隐私。修改为任何来源&lt;br&gt;
-如果没有这个选项的话 （macOS Sierra 10.12） , 打开终端，执行  &lt;code&gt;sudo spctl --master-disable&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;安装的软件 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pZnVubWFjLmNvbQ==&#34;&gt;www.ifunmac.com&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;chrome&lt;/li&gt;
-&lt;li&gt;搜狗输入法&lt;/li&gt;
-&lt;li&gt;BetterZip&lt;/li&gt;
-&lt;li&gt;Xcode (附带 Git)&lt;/li&gt;
-&lt;li&gt;GitKraken&lt;/li&gt;
-&lt;li&gt;iStat Menus 监控硬件温度&lt;/li&gt;
-&lt;li&gt;VS Code&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Zpc2hzaGVsbC5jb20v&#34;&gt;fishshell&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dldGxhbnRlcm4vbGFudGVybg==&#34;&gt;蓝灯&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;Homebrew： &lt;code&gt;/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;系统偏好设置&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;触摸板 - 滚动缩放，勾去自然&lt;/li&gt;
-&lt;li&gt;触摸板 - 光标与点按，辅助点按 - 用两个手指点按&lt;/li&gt;
-&lt;li&gt;触摸板 - 轻点来点按&lt;/li&gt;
-&lt;li&gt;安全与隐私性 -&lt;/li&gt;
-&lt;li&gt;声音 - 在菜单栏中显示音量&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;command&lt;/code&gt;  +  &lt;code&gt;shift&lt;/code&gt;  +  &lt;code&gt;.&lt;/code&gt;  显示隐藏文件&lt;br&gt;
- &lt;code&gt;ls -la&lt;/code&gt;  终端显示隐藏文件&lt;br&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25vZGVqcy5vcmc=&#34;&gt; nodejs.org&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;safari 设置审查元素 - safari 偏好设置 - 高级 - 在菜单栏中显示开发菜单&lt;/p&gt;
-&lt;h3 id=&#34;node&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#node&#34;&gt;#&lt;/a&gt; node&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;npm config set registry https://registry.npm.taobao.org --global
-npm config set disturl https://npm.taobao.org/dist --global
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;vscode-插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#vscode-插件&#34;&gt;#&lt;/a&gt; vscode 插件&lt;/h3&gt;
-&lt;p&gt;command + shift + p =&amp;gt; Shell Command&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;[vutur]&lt;/li&gt;
-&lt;li&gt;[]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;ps-插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ps-插件&#34;&gt;#&lt;/a&gt; ps 插件&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5mYW5jeW5vZGUuY29tLmNuL3B4Y29vaw==&#34;&gt;pxCook&lt;/span&gt; 支持 sketch&lt;br&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5jdXR0ZXJtYW4uY24vemgvY3V0dGVybWFu&#34;&gt;cutterman&lt;/span&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGh1Yi5jb20vbm9ydmlnL3BhaXAtbGlzcA==&#34;&gt;Mac 系统免费软件&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2pheXdjamxvdmUvYXdlc29tZS1tYWMvYmxvYi9tYXN0ZXIvUkVBRE1FLXpoLm1k&#34;&gt;Awesome Mac（中文版）&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jaXJjbGVhcHBzLmNvLw==&#34;&gt;Source Player - 国人开发的 MacOS 视频播放器，特点是点击文本字幕，会显示英语单词的中文解释，英语学习者的小帮手&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZGF0by9pZDE0NzA1ODQxMDc/bXQ9MTI=&#34;&gt;Dato - MacOS 菜单栏系统时钟的替代品，显示月历和时区，免费软件。&lt;/span&gt;&lt;br&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3NpbmRyZXNvcmh1cy9HaWZza2k=&#34;&gt;gifski macOS 视频转 gif&lt;/span&gt;&lt;br&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9keW5hbWljd2FsbHBhcGVyLmNsdWIv&#34;&gt;MacOS Mojave 动态壁纸&lt;/span&gt;&lt;br&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wb2NrLmRldi8=&#34;&gt; Pock - 把 Macbook 笔记本的 Dock 栏都搬到 Touchbar&lt;/span&gt;&lt;br&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dlZTFrL3VQaWM=&#34;&gt;mac os 上传图床&lt;/span&gt;&lt;br&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21hdHJ5ZXIvYml0YmFy&#34;&gt; bitbar 将任何脚本或程序的输出直接放在 Mac OS X 菜单栏的工具。&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21tYXR0b3p6aS9MaXRlcmFyeUNsb2NrU2NyZWVuU2F2ZXI=&#34;&gt;LiteraryClockScreenSaver - Mac 的屏保程序，会显示一段文学作品的段落，里面包含了当前时间。&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3NlcmhpaS1sb25kYXIvb3Blbi1zb3VyY2UtbWFjLW9zLWFwcHMvYmxvYi9tYXN0ZXIvUkVBRE1FLm1k&#34;&gt;open-source-mac-os-app&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcmNoaXZlLm9yZy9kZXRhaWxzL21hY19NYWNPU182LjAuOA==&#34;&gt;MacOS system6 - Macintosh 计算机的操作系统，1988 年由苹果公司发布。这里用虚拟机在浏览器里面启动这个操作系统。&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qb3NlcGhjaGFuZzEwLmdpdGh1Yi5pby9jaGluZXNlLWluZGllLWhhY2tlcnMv&#34;&gt;中国独立 iOS 和 macOS 开发者的作品&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21hdHJ5ZXIvYml0YmFy&#34;&gt;bitbar 将任何脚本或程序的输出直接放在 Mac OS X 菜单栏的工具。&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
         <updated>2018-12-31T16:00:00.000Z</updated>
