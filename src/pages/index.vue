@@ -21,7 +21,9 @@
   <SectionContainer class="flex items-center">
     <div class="w-1/2 pb-20">
       <h3 class="text-2xl font-semibold mb-4 text-gray-700">
-        <a href="/asker">@coloration/asker</a>
+        <router-link to="/asker">
+          @coloration/asker
+        </router-link>
       </h3>
       <Paragraph>
         一个简单的，功能丰富的客户端HTTP工具，支持TS。大小只有4K
@@ -34,7 +36,9 @@
       <img class="w-1/2" src="/images/features-split-top-02.png" alt="">
       <div class="w-1/2 pb-20">
         <h3 class="text-2xl font-semibold mb-4 text-gray-700">
-          <a href="/kit">@coloration/kit</a>
+          <router-link to="/kit">
+            @coloration/kit
+          </router-link>
         </h3>
         <Paragraph>
           工具函数仓库，可以作为 lodash, ramda之外的补充
