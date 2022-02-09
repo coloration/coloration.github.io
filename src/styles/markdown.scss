@@ -1,7 +1,7 @@
 /* https://github.com/antfu/prism-theme-vars */
 
 .mk {
-	@apply text-base;
+	@apply text-base text-gray-600;
 	h1 {
 		@apply mb-8 text-gray-900 dark:text-gray-100
 			font-extrabold text-4xl tracking-tight
@@ -24,11 +24,11 @@
 	}
 
 	p {
-		@apply mb-6 text-justify tracking-wide;
+		@apply mb-6 tracking-wide;
 	}
 
 	li {
-		@apply mb-3 text-justify tracking-wide;
+		@apply mb-3 tracking-wide;
 	}
 
 	b, strong {
@@ -95,7 +95,7 @@
 }
 
 .mk .table-of-contents {
-
+	@apply hidden md:block;
 	ul, ol {
 		@apply font-semibold -my-2 list-none pl-0 text-shadow;
 

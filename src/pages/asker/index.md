@@ -3,18 +3,18 @@
 
 # @coloration/asker
 
-- Github: <https://github.com/coloration/asker>
-- Living Document: <https://binyu.me/coloration/asker>
-- Github Document Page: <https://github.com/coloration/asker/blob/master/DOCUMENT.md>
+- [Github](https://github.com/coloration/asker)
+- [Living Document](https://coloration.github.io/#/asker)
+- [Github Document Page](https://github.com/coloration/asker/blob/master/DOCUMENT.md)
 
 <!-- more -->
 
-<p style="display: flex;">
-  <img style="margin-right: 6px" src="https://img.shields.io/npm/v/@coloration/asker.svg" alt="version">
-  <img style="margin-right: 6px" src="https://img.shields.io/npm/l/@coloration/asker.svg" alt="lic">
-  <img style="margin-right: 6px" src="https://img.shields.io/npm/dm/@coloration/asker.svg" alt="Download">
-  <img style="margin-right: 6px" src="https://img.shields.io/bundlephobia/min/@coloration/asker@0.9.0" alt="min">
-  <img style="margin-right: 6px" src="https://img.shields.io/bundlephobia/minzip/@coloration/asker@0.9.0" alt="minzip">
+<p style="display: flex; flex-wrap: wrap; grid-gap: 1rem; gap: 1rem;">
+  <img  style="margin: 0" src="https://img.shields.io/npm/v/@coloration/asker.svg" alt="version">
+  <img  style="margin: 0" src="https://img.shields.io/npm/l/@coloration/asker.svg" alt="lic">
+  <img  style="margin: 0" src="https://img.shields.io/npm/dm/@coloration/asker.svg" alt="Download">
+  <img  style="margin: 0" src="https://img.shields.io/bundlephobia/min/@coloration/asker@0.9.0" alt="min">
+  <img  style="margin: 0" src="https://img.shields.io/bundlephobia/minzip/@coloration/asker@0.9.0" alt="minzip">
 </p>
 
 

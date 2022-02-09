@@ -1,16 +1,17 @@
 # @coloration/kit
 
-- 项目地址Github: <https://github.com/coloration/kit>
 
 <!-- more -->
 
 [[toc]]
 
+- [Github](https://github.com/coloration/kit)
+- [Living Document](https://coloration.github.io/#/kit)
 
-<p style="display: flex;">
-<img src="https://img.shields.io/npm/v/@coloration/kit.svg" alt="version">
-<img src="https://img.shields.io/npm/l/@coloration/kit.svg" alt="lic">
-<img src="https://img.shields.io/npm/dm/@coloration/kit.svg" alt="Download">
+<p style="display: flex; flex-wrap: wrap; grid-gap: 1rem; gap: 1rem;">
+  <img style="margin: 0" src="https://img.shields.io/npm/v/@coloration/kit.svg" alt="version">
+  <img style="margin: 0" src="https://img.shields.io/npm/l/@coloration/kit.svg" alt="lic">
+  <img style="margin: 0" src="https://img.shields.io/npm/dm/@coloration/kit.svg" alt="Download">
 </p>
 
 ## Start Up
