@@ -158,36 +158,51 @@ export function get (url, params, conf) {
 }
 ```
 
-**Uniapp Request Example** 
+**Uniapp/Taro Request Example** 
 
-``` js
-import { Asker } from '@coloration/asker'
+``` ts
+import { AskerAdapterConf, AskerResponse, Asker, AskerConf } from '@coloration/asker'
+import { request } from '@tarojs/taro'
 
-function uniappRequestAdapter (conf, defRes) {
+function requestAdapter (conf: AskerAdapterConf, defRes: AskerResponse) {
   return new Promise((resolve, reject) => {
-    uni.request({
+    request({
       url: conf.uri,
-      method: String(conf.method).toUpperCase(),
+      method: String(conf.method).toLowerCase() as any,
+      responseType: conf.responseType as any,
       data: conf.body,
       success (response) {
-        defRes.statusCode = response.statusCode
+        defRes.status = response.statusCode
         defRes.data = response.data
-
-        response.statusCode === 200 ? resolve(defRes) : reject(defRes)
+        defRes.statusText = 'success'
+        resolve(defRes)
       },
       fail: reject
     })
   })
 }
 
-// demo 1
-const api = new Asker({ 
-  adapter: uniappRequestAdapter
+// demo 1 WARN!: global override
+Object.assign<AskerConf, AskerConf>(Asker.conf, {
+  adapter: requestAdapter,
+  responseType: 'text',
+  after: (res) => res.data
 })
 
-// demo 2: WARN!: global override
-Asker.adapter = uniappRequestAdapter
-const api = new Asker()
+export const Request = Asker
+
+const api = new Request({
+  baseUrl: 'foo'
+})
+
+// demo 2
+const api = new Asker({ 
+  baseUrl: 'foo',
+  adapter: uniappRequestAdapter，
+  responseType: 'text',
+  after: (res) => res.data
+})
+
 ```
 
 You are mocking when you return a data in the `adapter` function instead of the promise. You could also pass a normal data to `adapter`.
