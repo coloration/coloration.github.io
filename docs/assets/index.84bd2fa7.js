@@ -66,33 +66,48 @@ Asker<span class="token punctuation">.</span><span class="token function">jsonp<
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
-</code></pre><p><strong>Uniapp Request Example</strong></p><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> Asker <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;@coloration/asker&#39;</span>
+</code></pre><p><strong>Uniapp/Taro Request Example</strong></p><pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> AskerAdapterConf<span class="token punctuation">,</span> AskerResponse<span class="token punctuation">,</span> Asker<span class="token punctuation">,</span> AskerConf <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;@coloration/asker&#39;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> request <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&#39;@tarojs/taro&#39;</span>
 
-<span class="token keyword">function</span> <span class="token function">uniappRequestAdapter</span> <span class="token punctuation">(</span><span class="token parameter">conf<span class="token punctuation">,</span> defRes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    uni<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-      <span class="token literal-property property">url</span><span class="token operator">:</span> conf<span class="token punctuation">.</span>uri<span class="token punctuation">,</span>
-      <span class="token literal-property property">method</span><span class="token operator">:</span> <span class="token function">String</span><span class="token punctuation">(</span>conf<span class="token punctuation">.</span>method<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">data</span><span class="token operator">:</span> conf<span class="token punctuation">.</span>body<span class="token punctuation">,</span>
-      <span class="token function">success</span> <span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        defRes<span class="token punctuation">.</span>statusCode <span class="token operator">=</span> response<span class="token punctuation">.</span>statusCode
+<span class="token keyword">function</span> <span class="token function">requestAdapter</span> <span class="token punctuation">(</span>conf<span class="token operator">:</span> AskerAdapterConf<span class="token punctuation">,</span> defRes<span class="token operator">:</span> AskerResponse<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name"><span class="token builtin">Promise</span></span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      url<span class="token operator">:</span> conf<span class="token punctuation">.</span>uri<span class="token punctuation">,</span>
+      method<span class="token operator">:</span> <span class="token function">String</span><span class="token punctuation">(</span>conf<span class="token punctuation">.</span>method<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">,</span>
+      responseType<span class="token operator">:</span> conf<span class="token punctuation">.</span>responseType <span class="token keyword">as</span> <span class="token builtin">any</span><span class="token punctuation">,</span>
+      data<span class="token operator">:</span> conf<span class="token punctuation">.</span>body<span class="token punctuation">,</span>
+      <span class="token function">success</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        defRes<span class="token punctuation">.</span>status <span class="token operator">=</span> response<span class="token punctuation">.</span>statusCode
         defRes<span class="token punctuation">.</span>data <span class="token operator">=</span> response<span class="token punctuation">.</span>data
-
-        response<span class="token punctuation">.</span>statusCode <span class="token operator">===</span> <span class="token number">200</span> <span class="token operator">?</span> <span class="token function">resolve</span><span class="token punctuation">(</span>defRes<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">reject</span><span class="token punctuation">(</span>defRes<span class="token punctuation">)</span>
+        defRes<span class="token punctuation">.</span>statusText <span class="token operator">=</span> <span class="token string">&#39;success&#39;</span>
+        <span class="token function">resolve</span><span class="token punctuation">(</span>defRes<span class="token punctuation">)</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token literal-property property">fail</span><span class="token operator">:</span> reject
+      fail<span class="token operator">:</span> reject
     <span class="token punctuation">}</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 
-<span class="token comment">// demo 1</span>
-<span class="token keyword">const</span> api <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Asker</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
-  <span class="token literal-property property">adapter</span><span class="token operator">:</span> uniappRequestAdapter
+<span class="token comment">// demo 1 WARN!: global override</span>
+Object<span class="token punctuation">.</span><span class="token generic-function"><span class="token function">assign</span><span class="token generic class-name"><span class="token operator">&lt;</span>AskerConf<span class="token punctuation">,</span> AskerConf<span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>Asker<span class="token punctuation">.</span>conf<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  adapter<span class="token operator">:</span> requestAdapter<span class="token punctuation">,</span>
+  responseType<span class="token operator">:</span> <span class="token string">&#39;text&#39;</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">after</span><span class="token operator">:</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> res<span class="token punctuation">.</span>data
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-<span class="token comment">// demo 2: WARN!: global override</span>
-Asker<span class="token punctuation">.</span>adapter <span class="token operator">=</span> uniappRequestAdapter
-<span class="token keyword">const</span> api <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Asker</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> Request <span class="token operator">=</span> Asker
+
+<span class="token keyword">const</span> api <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Request</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  baseUrl<span class="token operator">:</span> <span class="token string">&#39;foo&#39;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// demo 2</span>
+<span class="token keyword">const</span> api <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Asker</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
+  baseUrl<span class="token operator">:</span> <span class="token string">&#39;foo&#39;</span><span class="token punctuation">,</span>
+  adapter<span class="token operator">:</span> uniappRequestAdapter\uFF0C
+  responseType<span class="token operator">:</span> <span class="token string">&#39;text&#39;</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">after</span><span class="token operator">:</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> res<span class="token punctuation">.</span>data
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
 </code></pre><p>You are mocking when you return a data in the <code>adapter</code> function instead of the promise. You could also pass a normal data to <code>adapter</code>.</p><pre class="language-js"><code class="language-js">Asker<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">&#39;whatever string&#39;</span><span class="token punctuation">,</span> whateverParam<span class="token punctuation">,</span> <span class="token punctuation">{</span>
   <span class="token literal-property property">adapter</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span>
