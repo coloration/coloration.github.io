@@ -45,7 +45,10 @@ $ npm i @coloration/asker -S
 > JavaScript
 
 ``` js
+// es6
 import { Asker } from '@coloration/asker'
+// nodejs
+const { Asker } = require('@coloration/asker')
 
 Asker.get('http://api.io/list', { page: 1, size: 20 })
 ```
@@ -483,7 +486,43 @@ export interface AskerConf {
   timeout?: number,
 
   /** set `XMLHTTPRequest` withCredentials */
-  withCredentials?: true,
+  withCredentials?: boolean,
+
+  /** server only */
+  httpsAgent?: any,
+
+  /** server only */
+  httpAgent?: any,
+  
+  /** server only */
+  socketPath?: string | null,
+  
+  /** server only */
+  transport?: any,
+  
+  /** server only */
+  maxRedirects?: number,
+  
+  /** server only */
+  beforeRedirect?: (options: Record<string, any>, responseDetails: {headers: Record<string, string>}) => void,
+
+  /** server only */
+  maxBodyLength?: number,
+
+  /** server only */
+  insecureHTTPParser?: boolean,
+  
+  /** server only */
+  decompress?: boolean,
+
+  /** server only */
+  maxContentLength?: number,
+
+  /** server only */
+  responseEncoding?: ResponseEncoding,
+
+  /** server only */
+  transitional?: any,
 
   /** custom validator, default is `status >= 200 && status < 300` */
   validator?: (status: number) => boolean,
@@ -492,10 +531,7 @@ export interface AskerConf {
    * it also can be used in mock, you can pass a data (except `undefined`), it will return a response 
    * wrapped by `AskerResponse` object. Or you pass a function return a custom data
   */
-  adapter?: string | number | boolean | { [key: string]: any } | any[] |
-    ((response: any, defaultResponse: AskerResponse) => Promise<any>) | 
-    (<T>(response: T, defaultResponse: AskerResponse) => Promise<T>)
-  ,
+  adapter?: AskerAdapter,
   
   /** hook chain change the `AskerConf` before the request  */
   before?: (conf: AskerConf) => AskerConf | ((conf: AskerConf) => AskerConf)[],
